@@ -7,6 +7,9 @@ _ft_read:
 	jc _read_err
     ret
 _read_err:  
-    mov [errno], eax
+	push rax
+	call ___error
+	pop rdx
+    mov [rax], rdx
     mov rax, -1 
     ret
