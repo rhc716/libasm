@@ -1,22 +1,23 @@
     section .text
 	global _ft_strcmp
 _ft_strcmp:
-    mov rax, 0
+	mov rax, 0
+	mov rbx, 0
+    mov rcx, 0
     jmp cmp
 cmp:  
-    mov rcx, byte [rdi + rax]
-	mov rdx, byte [rsi + rax]
-	cmp rcx, rdx
+    movzx rax, byte [rdi + rcx]
+	movzx rbx, byte [rsi + rcx]
+	cmp rax, rbx
     je je
 	jne jne
 je:
-	cmp rcx, 0
+	cmp rax, 0
 	je end
-	inc rax
+	inc rcx
 	jmp cmp
 jne:
-	sub rcx, rdx
-	mov rax, rcx
+	sub rax, rbx
 	ret
 end:
 	mov rax, 0
