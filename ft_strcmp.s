@@ -4,16 +4,19 @@ _ft_strcmp:
     mov rax, 0
     jmp cmp
 cmp:  
-    cmp byte [rdi + rax], byte [rsi + rax]
+    mov rcx, byte [rdi + rax]
+	mov rdx, byte [rsi + rax]
+	cmp rcx, rdx
     je je
 	jne jne
 je:
-	cmp byte [rdi + rax], 0
+	cmp rcx, 0
 	je end
 	inc rax
 	jmp cmp
 jne:
-	mov rax, byte [rdi + rax] - byte [rsi + rax]
+	sub rcx, rdx
+	mov rax, rcx
 	ret
 end:
 	mov rax, 0

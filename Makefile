@@ -1,6 +1,6 @@
 NAME = libasm.a
 
-FILES = ft_read.s ft_stcpy.s ft_strcmp.s ft_strdup.s ft_strlen.s ft_write.s
+FILES = ft_read.s ft_strcpy.s ft_strcmp.s ft_strdup.s ft_strlen.s ft_write.s
 
 OBJS_DIR = ./
 OBJS = $(addprefix $(OBJS_DIR), $(subst .s,.o,$(FILES)))
