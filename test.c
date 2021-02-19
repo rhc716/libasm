@@ -9,7 +9,7 @@ void test_ft_read()
     printf("\n");
 	printf("read test.txt\n");
 	printf("------------------------------------------\n");
-	printf("*                	read                 *\n");
+	printf("*                  read                  *\n");
 	printf("------------------------------------------\n");
 	fd = open("./test.txt", O_RDONLY);
 	while ((ret = read(fd, &buf, 1) > 0))
@@ -41,7 +41,6 @@ void test_ft_write()
 {
 	int ret;
 
-    printf("\n");
 	printf("------------------------------------------\n");
     printf("*                   write                *\n");
     printf("------------------------------------------\n");
