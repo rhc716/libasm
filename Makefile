@@ -21,4 +21,8 @@ fclean: clean
 
 re: fclean all
 
+test: re
+	gcc test.c -L. -lasm
+	./a.out
+
 .PHONY: all clean fclean re
