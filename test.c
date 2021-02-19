@@ -108,15 +108,45 @@ void test_ft_strcpy()
 	ret = ft_strcpy(dest, "abcdf");
 	printf("src : abcdf\n");
 	printf("dest : %s\n", dest);
-	printf("ret : %s\n", ret);
+	printf("ret : %s\n\n", ret);
 	ret = ft_strcpy(dest, "123");
 	printf("src : 123\n");
 	printf("dest : %s\n", dest);
-	printf("ret : %s\n", ret);
+	printf("ret : %s\n\n", ret);
 	ret = ft_strcpy(dest, "1234567");
 	printf("src : 1234567\n");
 	printf("dest : %s\n", dest);
 	printf("ret : %s\n", ret);
+}
+
+void test_ft_strdup()
+{
+	char *ret;
+	char *ret_ori;
+
+    printf("------------------------------------------\n");
+    printf("*                test_strdup             *\n");
+    printf("------------------------------------------\n");
+	ret = ft_strdup("abcdf");
+	ret_ori = strdup("abcdf");
+	printf("src : abcdf\n");
+	printf("strdup : %s\n", ret_ori);
+	printf("ft_strdup : %s\n\n", ret);
+	ret = ft_strdup("123");
+	ret_ori = strdup("123");
+	printf("src : 123\n");
+	printf("strdup : %s\n", ret_ori);
+	printf("ft_strdup : %s\n\n", ret);
+	ret = ft_strdup("1234567");
+	ret_ori = strdup("1234567");
+	printf("src : 1234567\n");
+	printf("strdup : %s\n", ret_ori);
+	printf("ft_strdup : %s\n\n", ret);
+	ret = ft_strdup("");
+	ret_ori = strdup("");
+	printf("src : \"\"\n");
+	printf("strdup : %s\n", ret_ori);
+	printf("ft_strdup : %s\n", ret);
 }
 
 int main()
@@ -126,4 +156,5 @@ int main()
 	test_ft_strlen();
 	test_ft_strcmp();
 	test_ft_strcpy();
+	test_ft_strdup();
 }
