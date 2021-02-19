@@ -67,10 +67,32 @@ void test_ft_strcmp()
 	printf("\n");
 }
 
+void test_ft_strcpy()
+{
+	int ret;
+	char *dest = malloc(sizeof(char) * 10);
+
+    printf("\n");
+    printf("------------------------------------------\n");
+    printf("*                test_strcpy             *\n");
+    printf("------------------------------------------\n");
+	ret = ft_strcpy(dest, "abcdf");
+	printf("src : abcdf dest : %s\n", dest);
+	printf("ret : %s\n", ret);
+	ft_strcpy(dest, "123");
+	printf("src : 123 dest : %s\n", dest);
+	printf("ret : %s\n", ret);
+	ft_strcmp(dest, "12345678910");
+	printf("src : 12345678910 dest : %s\n", dest);
+	printf("ret : %s\n", ret);
+	printf("\n");
+}
+
 int main()
 {
 	test_ft_read();
 	test_ft_write();
 	test_ft_strlen();
 	test_ft_strcmp();
+	test_ft_strcpy();
 }
