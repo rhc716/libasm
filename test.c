@@ -82,7 +82,7 @@ void test_ft_strcpy()
 	ret = ft_strcpy(dest, "123");
 	printf("src : 123 dest : %s\n", dest);
 	printf("ret : %s\n", ret);
-	ret = ft_strcmp(dest, "1234567");
+	ret = ft_strcpy(dest, "1234567");
 	printf("src : 1234567 dest : %s\n", dest);
 	printf("ret : %s\n", ret);
 	printf("\n");
